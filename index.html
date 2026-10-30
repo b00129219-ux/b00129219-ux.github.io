@@ -1,5 +1,618 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head><meta charset="utf-8"><title>متاع الآخرة</title></head>
-<body><h1>تطبيق متاع الآخرة</h1><p>متوفر على Google Play.</p></body>
+<!DOCTYPE html>
+<html class="scroll-smooth" dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>تطبيق "متاع الآخرة" - رفيقك في طريق الخير</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b1120',
+                            950: '#050811',
+                        },
+                        emerald: {
+                            750: '#047857',
+                            850: '#064e3b',
+                            900: '#022c22',
+                        },
+                        gold: {
+                            100: '#fef3c7',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                        kufi: ['Reem Kufi', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800;900&family=Reem+Kufi:wght@500;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-islamic-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 1px), radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #059669;
+            border-radius: 4px;
+        }
+
+        .reader-theme-light { background-color: #ffffff; color: #1e293b; }
+        .reader-theme-sepia { background-color: #f7f1e5; color: #3e2723; }
+        .reader-theme-dark { background-color: #064e3b; color: #ecfdf5; }
+        .reader-theme-night { background-color: #0f172a; color: #f1f5f9; }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-navy-900 text-slate-800 dark:text-slate-100 transition-colors duration-300 relative bg-islamic-pattern min-h-screen">
+
+    <!-- Top Hadith Bar -->
+    <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-navy-900 text-gold-300 py-2 px-4 text-xs sm:text-sm text-center border-b border-gold-500/20 shadow-inner flex justify-center items-center gap-3">
+        <i class="fa-solid fa-kaaba text-gold-400 animate-pulse"></i>
+        <span>قال تعالى: <strong class="font-amiri text-base text-gold-300">&#64831;و&#1614;ت&#1614;ز&#1614;&#1617;د&#1615;وا ف&#1614;إ&#1616;ن&#1614;&#1617; خ&#1614;ي&#1618;ر&#1614; الز&#1614;&#1617;اد&#1616; الت&#1614;&#1617;ق&#1618;و&#1614;ى&#1648;&#64830;</strong> &#8212; مرحبا&#1611; بكم في تطبيق متاع الآخرة</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-navy-900/90 border-b border-emerald-500/10 dark:border-emerald-500/20 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo & Brand -->
+                <a class="flex items-center gap-3 group" href="#">
+                    <img alt="لوجو متاع الآخرة" class="w-12 h-12 rounded-2xl object-contain shadow-md border border-gold-400/40" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFonKj3A3LlsTemU6GmH01DYNq1BCSSg72LtccmvF0Mk2BIiWfawzI5fUK9ymXqOfUSYQEaBktSl1Y-_QQu0dbHafW6LASDyavDHbwdez64fABjmsMGJ6yVTfi9djHsaXbM1tdBy9ydxkyedhxp66057ZlMH-vaPIY9AlAMuxIWMdkPY6ABed0U4slg0EV/w624-h624/icon.png">
+                    <div class="flex flex-col">
+                        <span class="font-kufi text-2xl font-bold bg-gradient-to-l from-gold-500 via-emerald-600 to-emerald-800 dark:from-gold-300 dark:via-emerald-400 dark:to-emerald-200 bg-clip-text text-transparent">
+                            متاع الآخرة
+                        </span>
+                        <span class="text-[10px] text-emerald-700 dark:text-emerald-400 font-semibold tracking-wider">رفيقك الروحاني في طريق الخير</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-2 text-sm font-semibold">
+                    <a class="px-3 py-2 rounded-xl hover:text-emerald-600 dark:hover:text-gold-400 transition" href="#hero">الرئيسية</a>
+                    <a class="px-3 py-2 rounded-xl hover:text-emerald-600 dark:hover:text-gold-400 transition" href="#overview">نبذة عن التطبيق</a>
+                    <a class="px-3 py-2 rounded-xl hover:text-emerald-600 dark:hover:text-gold-400 transition" href="#features">أبرز المميزات</a>
+                    <a class="px-3 py-2 rounded-xl hover:text-emerald-600 dark:hover:text-gold-400 transition" href="#demo-reader">تجربة القراءة</a>
+                    <a class="px-3 py-2 rounded-xl hover:text-emerald-600 dark:hover:text-gold-400 transition" href="#team">طاقم العمل</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button aria-label="تبديل الوضع الليلي والنهاري" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-gold-400 flex items-center justify-center border border-slate-200 dark:border-slate-700" id="themeToggleBtn">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-lg text-gold-400"></i>
+                    </button>
+
+                    <!-- Single Download Button Header -->
+                    <a class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-800 hover:from-emerald-500 hover:to-emerald-700 text-white font-bold shadow-md transition border border-gold-400/30" href="https://play.google.com/store/apps/details?id=com.Thepleasuresofthehereafter&pcampaignid=web_share" target="_blank">
+                        <i class="fa-brands fa-google-play text-gold-300 text-lg"></i>
+                        <span>تحميل التطبيق</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden" id="hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs sm:text-sm font-bold">
+                        <i class="fa-solid fa-sparkles text-gold-500"></i>
+                        <span>مكتبة إلكترونية إسلامية تعمل بدون إنترنت</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight font-kufi">
+                        تطبيق <span class="bg-gradient-to-l from-gold-500 via-emerald-600 to-emerald-800 dark:from-gold-300 dark:via-emerald-400 dark:to-emerald-200 bg-clip-text text-transparent">"متاع الآخرة"</span>
+                        <span class="block text-xl sm:text-2xl lg:text-3xl font-tajawal font-bold text-slate-700 dark:text-slate-300 mt-2">
+                            رفيقك الروحاني في طريق الخير
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-tajawal max-w-2xl mx-auto lg:mx-0">
+                        مكتبة إلكترونية إسلامية متكاملة&#1548; ص&#1615;ممت لتكون رفيقا&#1611; للمؤمن في حياته اليومية. يجمع التطبيق بين العلم الشرعي الموثوق والتقنيات الحديثة&#1548; ليوفر تجربة قراءة وعبادة سلسة ومريحة&#1548; دون الحاجة للاتصال بالإنترنت.
+                    </p>
+
+                    <!-- Single Main Download Button -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-800 hover:from-emerald-500 hover:to-emerald-700 text-white font-extrabold text-lg shadow-xl hover:shadow-emerald-600/40 transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3 border border-gold-400/40" href="https://play.google.com/store/apps/details?id=com.Thepleasuresofthehereafter&pcampaignid=web_share" target="_blank">
+                            <i class="fa-brands fa-google-play text-2xl text-gold-300"></i>
+                            <span>تحميل من متجر Google Play</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphic/Mockup -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-sm bg-navy-900 border-4 border-slate-700 rounded-[2.5rem] shadow-2xl p-4">
+                        <div class="w-32 h-5 bg-slate-800 rounded-b-xl mx-auto mb-3"></div>
+                        <div class="bg-slate-900 text-white rounded-2xl p-4 space-y-4 border border-slate-800">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-book-quran text-gold-400"></i>
+                                    <span class="font-kufi font-bold text-gold-400 text-sm">متاع الآخرة</span>
+                                </div>
+                                <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-800">بدون إنترنت</span>
+                            </div>
+                            <div class="bg-emerald-950/80 p-4 rounded-xl border border-emerald-700/50">
+                                <span class="text-xs text-gold-400 font-bold block mb-1">المسبحة الإلكترونية المتطورة</span>
+                                <p class="text-xs text-emerald-100 font-amiri">تشمل تسبيح الزهراء (عليها السلام) بنظام اهتزاز ذكي وانتقال تلقائي.</p>
+                            </div>
+                            <div class="space-y-2 text-xs font-bold">
+                                <div class="p-3 bg-slate-800 rounded-xl flex items-center justify-between border border-slate-700 text-emerald-300">
+                                    <span>كتاب الصدقة</span>
+                                    <i class="fa-solid fa-book-open text-gold-400"></i>
+                                </div>
+                                <div class="p-3 bg-slate-800 rounded-xl flex items-center justify-between border border-slate-700 text-emerald-300">
+                                    <span>مختصر أذكار الأسبوع</span>
+                                    <i class="fa-solid fa-book-open text-gold-400"></i>
+                                </div>
+                                <div class="p-3 bg-slate-800 rounded-xl flex items-center justify-between border border-slate-700 text-emerald-300">
+                                    <span>كتاب وبالوالدين إحسانا&#1611;</span>
+                                    <i class="fa-solid fa-book-open text-gold-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="py-16 bg-white dark:bg-navy-800 border-y border-slate-200 dark:border-slate-800" id="overview">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full border border-emerald-500/20">
+                    نبذة عن التطبيق
+                </span>
+                <h2 class="text-3xl font-extrabold font-kufi">تطبيق "متاع الآخرة"</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-base font-tajawal leading-relaxed">
+                    مكتبة إلكترونية إسلامية متكاملة&#1548; ص&#1615;ممت لتكون رفيقا&#1611; للمؤمن في حياته اليومية. يجمع التطبيق بين العلم الشرعي الموثوق والتقنيات الحديثة&#1548; ليوفر تجربة قراءة وعبادة سلسة ومريحة&#1548; دون الحاجة للاتصال بالإنترنت.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-slate-50 dark:bg-navy-900" id="features">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full border border-emerald-500/20">
+                    مميزات التطبيق
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-kufi">أبرز مميزات تطبيق متاع الآخرة</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h3 class="font-bold text-lg font-kufi">مكتبة PDF ثرية</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 font-tajawal leading-relaxed">
+                        وصول مباشر ومجاني لمجموعة من الكتب القيمة:
+                        <br>&#8226; <strong>كتاب الصدقة:</strong> بابك الواسع لفهم فضل الجود والإحسان.
+                        <br>&#8226; <strong>مختصر أذكار الأسبوع:</strong> حصنك الحصين من الأذكار اليومية المرتبة.
+                        <br>&#8226; <strong>كتاب وبالوالدين إحسانا&#1611;:</strong> مرجع شامل لحقوق الوالدين وبرهما.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-gold-100 dark:bg-gold-950 text-gold-600 dark:text-gold-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-dhikr"></i>
+                    </div>
+                    <h3 class="font-bold text-lg font-kufi">مسبحة إلكترونية متطورة</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 font-tajawal leading-relaxed">
+                        تشمل "تسبيح الزهراء (عليها السلام)" بنظام اهتزاز ذكي وانتقال تلقائي&#1548; بالإضافة إلى مسبحة مفتوحة للأذكار العامة.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="font-bold text-lg font-kufi">تجربة قراءة مخصصة</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 font-tajawal leading-relaxed">
+                        تحكم كامل في حجم الخط ومستويات التباين&#1548; مع ميزة حفظ العلامات المرجعية وسجل القراءة للعودة حيث توقفت.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-700 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-gold-100 dark:bg-gold-950 text-gold-600 dark:text-gold-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-kaaba"></i>
+                    </div>
+                    <h3 class="font-bold text-lg font-kufi">تصميم إسلامي فريد</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 font-tajawal leading-relaxed">
+                        واجهة فنية مستوحاة من العمارة الإسلامية والمحاريب العتيقة&#1548; تجمع بين الأصالة والحداثة لراحة العين.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Reader Demo Section -->
+    <section class="py-20 relative bg-slate-100 dark:bg-navy-950" id="demo-reader">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center space-y-4 mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 bg-emerald-200 dark:bg-emerald-900/60 px-3 py-1 rounded-full">
+                    تجربة القارئ التفاعلية
+                </span>
+                <h2 class="text-3xl font-extrabold font-kufi">استعرض محتوى كتب التطبيق</h2>
+            </div>
+
+            <!-- Reader Container -->
+            <div class="bg-white dark:bg-navy-900 rounded-3xl shadow-2xl border border-slate-300 dark:border-slate-700 overflow-hidden">
+
+                <!-- Reader Navigation Header -->
+                <div class="bg-slate-800 text-white p-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-700">
+                    <div class="flex items-center gap-2 overflow-x-auto">
+                        <button class="reader-sec-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 text-white" id="sectionBtn-0" onclick="switchReaderSection(0)">كتاب الصدقة</button>
+                        <button class="reader-sec-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-700 text-slate-300" id="sectionBtn-1" onclick="switchReaderSection(1)">مختصر أذكار الأسبوع</button>
+                        <button class="reader-sec-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-700 text-slate-300" id="sectionBtn-2" onclick="switchReaderSection(2)">كتاب وبالوالدين إحسانا&#1611;</button>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-slate-400">الموضوع:</span>
+                        <select class="bg-slate-900 text-slate-200 text-xs rounded-lg px-3 py-1.5 border border-slate-700 outline-none font-tajawal" id="readerArticleSelect" onchange="switchReaderArticle(this.value)">
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Reader Customization Toolbar -->
+                <div class="bg-slate-50 dark:bg-slate-800/80 p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-700 text-xs">
+
+                    <!-- Font Size Controls -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-slate-500 dark:text-slate-400 font-bold">حجم الخط:</span>
+                        <div class="flex items-center bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg overflow-hidden">
+                            <button class="px-2.5 py-1 text-slate-700 dark:text-slate-200 font-bold" onclick="adjustFontSize(-2)">A-</button>
+                            <span class="px-2 text-emerald-600 dark:text-emerald-400 font-bold border-x border-slate-200 dark:border-slate-800" id="fontSizeDisplay">18px</span>
+                            <button class="px-2.5 py-1 text-slate-700 dark:text-slate-200 font-bold" onclick="adjustFontSize(2)">A+</button>
+                        </div>
+                    </div>
+
+                    <!-- Reader Theme Mode -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-slate-500 dark:text-slate-400 font-bold">مظهر القراءة:</span>
+                        <div class="flex items-center gap-1.5">
+                            <button aria-label="فاتح" class="w-6 h-6 rounded-full bg-white border-2 border-slate-300" onclick="setReaderTheme('light')"></button>
+                            <button aria-label="ورقي" class="w-6 h-6 rounded-full bg-[#f7f1e5] border-2 border-amber-300" onclick="setReaderTheme('sepia')"></button>
+                            <button aria-label="أخضر" class="w-6 h-6 rounded-full bg-emerald-900 border-2 border-emerald-500" onclick="setReaderTheme('dark')"></button>
+                            <button aria-label="ليلي" class="w-6 h-6 rounded-full bg-slate-900 border-2 border-slate-600" onclick="setReaderTheme('night')"></button>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center gap-2 mr-auto">
+                        <button class="p-1.5 px-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-gold-500 transition flex items-center gap-1 font-bold" id="bookmarkBtn" onclick="toggleBookmark()">
+                            <i class="fa-regular fa-bookmark" id="bookmarkIcon"></i>
+                            <span id="bookmarkLabel">حفظ العلامة المرجعية</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Reader Reading View Area -->
+                <div class="reader-theme-sepia p-6 sm:p-10 min-h-[300px] max-h-[500px] overflow-y-auto font-amiri" id="readerViewport">
+                    <div class="border-b border-current/20 pb-4 mb-6">
+                        <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-600/10 text-emerald-800 dark:text-emerald-300 border border-emerald-600/30" id="readerArticleBadge">
+                            كتاب الصدقة
+                        </span>
+                        <h3 class="text-2xl font-bold mt-2 font-kufi" id="readerArticleTitle">
+                            فضل الصدقة وآثارها في البركة والدفع عن البلاء
+                        </h3>
+                    </div>
+
+                    <div class="space-y-4 leading-relaxed text-justify" id="readerArticleBody">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white dark:bg-navy-800 border-t border-slate-200 dark:border-slate-800" id="team">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-gold-700 dark:text-gold-400 bg-gold-100 dark:bg-gold-950 px-3 py-1 rounded-full border border-gold-500/20">
+                القائمون على العمل
+            </span>
+            <h2 class="text-3xl font-extrabold font-kufi">طاقم العمل</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700">
+                    <i class="fa-solid fa-user-graduate text-3xl text-gold-500 mb-3"></i>
+                    <h3 class="text-lg font-bold font-kufi">إعداد المادة العلمية</h3>
+                    <p class="text-emerald-700 dark:text-emerald-400 font-bold mt-1">الدكتور عامر الجبوري</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-700">
+                    <i class="fa-solid fa-code text-3xl text-emerald-600 dark:text-emerald-400 mb-3"></i>
+                    <h3 class="text-lg font-bold font-kufi">تطوير وبرمجة</h3>
+                    <p class="text-emerald-700 dark:text-emerald-400 font-bold mt-1">المبرمج حسين رياض</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Bottom CTA Banner -->
+    <section class="py-16 bg-gradient-to-br from-emerald-900 via-navy-900 to-emerald-950 text-white text-center space-y-6">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-kufi">احمل زادك الروحاني معك أينما كنت</h2>
+            <p class="text-slate-300 text-sm sm:text-base font-tajawal max-w-xl mx-auto mt-2">
+                حمل تطبيق <strong>"متاع الآخرة"</strong> الآن من متجر كوكل بلي واستمتع بقراءة كتبك وأذكارك والتسبيح بسهولة ودون إنترنت.
+            </p>
+            <div class="pt-6">
+                <a class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-black text-lg shadow-xl transition transform hover:-translate-y-1" href="https://play.google.com/store/apps/details?id=com.Thepleasuresofthehereafter&pcampaignid=web_share" target="_blank">
+                    <i class="fa-brands fa-google-play text-2xl"></i>
+                    <span>تحميل من Google Play</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 text-xs py-8 border-t border-slate-800 text-center">
+        <p class="font-tajawal">
+            جميع الحقوق محفوظة &#169; <span id="yearSpan">2026</span> - تطبيق <strong>متاع الآخرة</strong>
+        </p>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div class="fixed bottom-6 left-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-emerald-500/40 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none text-xs font-bold" id="toast">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg" id="toastIcon"></i>
+        <span id="toastMessage">تم تنفيذ العملية بنجاح</span>
+    </div>
+
+    <!-- JavaScript Engine -->
+    <script>
+        const readerSections = [
+            {
+                name: "كتاب الصدقة",
+                badge: "كتاب الصدقة",
+                articles: [
+                    {
+                        title: "فضل الصدقة وآثارها في البركة والدفع عن البلاء",
+                        content: `<p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">عن النبي محمد (صلى الله عليه وآله): «داووا مرضاكم بالصدقة، وادفعوا أبواب البلاء بالدعاء، وحصنوا أموالكم بالزكاة».</p>
+                        <p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">وعن أمير المؤمنين الإمام علي (عليه السلام): «استنزلوا الرزق بالصدقة، وإذا أملقتم فتاجروا الله بالصدقة».</p>
+                        <p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">وعن الإمام جعفر الصادق (عليه السلام): «صدقة الليل تطفئ غضب الرب، وتمحو الذنب العظيم، وتطرد الهدم، وصدقة النهار تثمر المال وتزيد في العمر».</p>
+                        <p>تعتبر الصدقة تجارة رابحة مع الله تعالى، تزكي النفوس وتفتح أبواب الرزق والبركة في الحياة الدنيا والآخرة.</p>`
+                    },
+                    {
+                        title: "صدقة السر والبركة الدائمة",
+                        content: `<p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">عن الإمام جعفر الصادق (عليه السلام): «أرض القيامة نار ما خلا ظل المؤمن، فإن صدقته تظله».</p>
+                        <p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">وعن أمير المؤمنين (عليه السلام): «الصدقة جُنّة من النار، وحجاب للمؤمن من العذاب».</p>
+                        <p>إخفاء الصدقة يطفئ غضب الرب ويحفظ كرامة المحتاجين، وهي من أعظم القربات التي يضاعف الله بها الأجر.</p>`
+                    }
+                ]
+            },
+            {
+                name: "مختصر أذكار الأسبوع",
+                badge: "أذكار الأسبوع",
+                articles: [
+                    {
+                        title: "الأذكار اليومية المأثورة لأيام الأسبوع (100 مرة)",
+                        content: `<p class="font-bold text-gold-600 dark:text-gold-400 mb-2">الأذكار اليومية المأثورة عن أهل البيت (عليهم السلام):</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li><strong>السبت:</strong> يا رب العالمين (100 مرة)</li>
+                            <li><strong>الأحد:</strong> يا ذا الجلال والإكرام (100 مرة)</li>
+                            <li><strong>الإثنين:</strong> يا قاضي الحاجات (100 مرة)</li>
+                            <li><strong>الثلاثاء:</strong> يا أرحم الراحمين (100 مرة)</li>
+                            <li><strong>الأربعاء:</strong> يا حي يا قيوم (100 مرة)</li>
+                            <li><strong>الخميس:</strong> لا إله إلا الله الملك الحق المبين (100 مرة)</li>
+                            <li><strong>الجمعة:</strong> اللهم صل على محمد وآل محمد وعجل فرجهم (100 مرة)</li>
+                        </ul>`
+                    },
+                    {
+                        title: "تعقيبات وتسابيح مأثورة",
+                        content: `<p class="font-bold text-gold-600 dark:text-gold-400 mb-2">عن الإمام جعفر الصادق (عليه السلام): «تسبيح فاطمة الزهراء (عليها السلام) في كل يوم في دبر كل صلاة أحب إلي من صلاة ألف ركعة في كل يوم».</p>
+                        <p>صفة التسبيح: 34 مرة (الله أكبر)، 33 مرة (الحمد لله)، 33 مرة (سبحان الله).</p>`
+                    }
+                ]
+            },
+            {
+                name: "كتاب وبالوالدين إحساناً",
+                badge: "بر الوالدين",
+                articles: [
+                    {
+                        title: "عظمة بر الوالدين وأثره في الدنيا والآخرة",
+                        content: `<p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">عن النبي محمد (صلى الله عليه وآله): «بر الوالدين أفضل من الصلاة والصوم والحج والعمرة والجهاد في سبيل الله».</p>
+                        <p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">وعن أمير المؤمنين الإمام علي (عليه السلام): «بر الوالدين أكبر فريضة، ومن بر والديه بره ولده».</p>
+                        <p class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">وعن الإمام جعفر الصادق (عليه السلام): «ما يمنع الرجل منكم أن يبر والديه حيين وميتين؛ يصلي عنهما، ويتصدق عنهما، ويحج عنهما، فيكون الذي صنع لهما وله مثل ذلك».</p>
+                        <p>إن الإحسان للوالدين باب مفتوح إلى الجنة، وسبب رئيسي لرحمة الله وتيسير الأمور في الدنيا.</p>`
+                    }
+                ]
+            }
+        ];
+
+        let currentSectionIdx = 0;
+        let currentArticleIdx = 0;
+        let currentFontSize = 18;
+
+        document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        function initReader() {
+            updateReaderSectionBtns();
+            populateArticleSelect();
+            renderArticleContent();
+        }
+
+        function switchReaderSection(secIdx) {
+            currentSectionIdx = secIdx;
+            currentArticleIdx = 0;
+            updateReaderSectionBtns();
+            populateArticleSelect();
+            renderArticleContent();
+        }
+
+        function updateReaderSectionBtns() {
+            for (let i = 0; i < 3; i++) {
+                const btn = document.getElementById(`sectionBtn-${i}`);
+                if (i === currentSectionIdx) {
+                    btn.className = "reader-sec-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 text-white";
+                } else {
+                    btn.className = "reader-sec-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-700 text-slate-300";
+                }
+            }
+        }
+
+        function populateArticleSelect() {
+            const select = document.getElementById('readerArticleSelect');
+            const articles = readerSections[currentSectionIdx].articles;
+            select.innerHTML = '';
+            articles.forEach((art, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.textContent = art.title;
+                if (idx === currentArticleIdx) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        function switchReaderArticle(artIdx) {
+            currentArticleIdx = parseInt(artIdx);
+            renderArticleContent();
+        }
+
+        function renderArticleContent() {
+            const sec = readerSections[currentSectionIdx];
+            const art = sec.articles[currentArticleIdx];
+
+            document.getElementById('readerArticleBadge').textContent = sec.badge;
+            document.getElementById('readerArticleTitle').textContent = art.title;
+
+            const bodyElem = document.getElementById('readerArticleBody');
+            bodyElem.innerHTML = art.content;
+            bodyElem.style.fontSize = `${currentFontSize}px`;
+
+            checkBookmarkStatus();
+        }
+
+        function adjustFontSize(delta) {
+            currentFontSize = Math.min(Math.max(currentFontSize + delta, 14), 30);
+            document.getElementById('fontSizeDisplay').textContent = `${currentFontSize}px`;
+            document.getElementById('readerArticleBody').style.fontSize = `${currentFontSize}px`;
+        }
+
+        function setReaderTheme(theme) {
+            const viewport = document.getElementById('readerViewport');
+            viewport.className = `p-6 sm:p-10 min-h-[300px] max-h-[500px] overflow-y-auto font-amiri reader-theme-${theme}`;
+        }
+
+        function toggleBookmark() {
+            const itemKey = `mataa_bookmark_${currentSectionIdx}_${currentArticleIdx}`;
+            let isSaved = null;
+            try { isSaved = localStorage.getItem(itemKey); } catch (e) {}
+
+            try {
+                if (isSaved) {
+                    localStorage.removeItem(itemKey);
+                    showToast("تم إزالة العلامة المرجعية");
+                } else {
+                    const bookmarkData = {
+                        section: currentSectionIdx,
+                        article: currentArticleIdx,
+                        title: readerSections[currentSectionIdx].articles[currentArticleIdx].title,
+                        timestamp: new Date().getTime()
+                    };
+                    localStorage.setItem(itemKey, JSON.stringify(bookmarkData));
+                    showToast("تم حفظ العلامة المرجعية بنجاح!");
+                }
+            } catch (e) {}
+            checkBookmarkStatus();
+        }
+
+        function checkBookmarkStatus() {
+            const itemKey = `mataa_bookmark_${currentSectionIdx}_${currentArticleIdx}`;
+            let isSaved = null;
+            try { isSaved = localStorage.getItem(itemKey); } catch (e) {}
+            const icon = document.getElementById('bookmarkIcon');
+            const label = document.getElementById('bookmarkLabel');
+
+            if (isSaved) {
+                icon.className = "fa-solid fa-bookmark text-gold-500";
+                label.textContent = "تم الحفظ في المحفوظات";
+            } else {
+                icon.className = "fa-regular fa-bookmark";
+                label.textContent = "حفظ العلامة المرجعية";
+            }
+        }
+
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = msg;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initReader();
+        });
+    </script>
+</body>
 </html>
